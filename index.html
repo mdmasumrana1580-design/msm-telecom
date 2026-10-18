@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#a70d3e"><meta name="description" content="MsM.Telecom — মোবাইল রিচার্জ ও টেলিকম সেবা">
+<title>MsM.Telecom</title><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="brand"><div class="logo"><span class="logo-mark">M</span><span class="logo-signal">〰</span></div><div><h1>MsM.<b>Telecom</b></h1><p>Fast • Secure • Always Connected</p></div><button class="bell" aria-label="Notifications" onclick="alert('এখন কোনো নতুন নোটিশ নেই')">♧</button></div>
+  <div class="tag">সব সময় আপনার সাথে</div>
+</header>
+<main>
+  <section class="balance card"><div><small>Balance</small><strong>৳ <span id="balance">0.00</span></strong><small class="muted">আপনার বর্তমান ব্যালেন্স</small></div><button class="outline" data-view="addmoney">＋ Add Balance</button></section>
+  <section class="card recharge">
+    <div class="operators" id="operators">
+      <button class="operator selected" data-op="Grameenphone"><span class="op gp">G</span><small>গ্রামীণফোন</small></button>
+      <button class="operator" data-op="Robi"><span class="op robi">R</span><small>রবি</small></button>
+      <button class="operator" data-op="Banglalink"><span class="op bl">B</span><small>বাংলালিংক</small></button>
+      <button class="operator" data-op="Airtel"><span class="op airtel">A</span><small>এয়ারটেল</small></button>
+      <button class="operator" data-op="Teletalk"><span class="op tel">T</span><small>টেলিটক</small></button>
+    </div>
+    <form id="rechargeForm" class="quick-recharge">
+      <label class="sr-only">মোবাইল নম্বর<input id="phone" inputmode="numeric" maxlength="11" placeholder="▯ রিচার্জ নম্বর (01XXXXXXXXX)" required></label>
+      <label class="sr-only">রিচার্জের পরিমাণ<input id="amount" type="number" min="10" max="5000" step="1" placeholder="৳ পরিমাণ" required></label>
+      <label class="sr-only">রিচার্জের ধরন<select id="rtype"><option>সাধারণ রিচার্জ</option><option>ইন্টারনেট প্যাক</option><option>মিনিট প্যাক</option><option>SMS প্যাক</option></select></label>
+      <button class="primary" type="submit">⚡ রিচার্জ করুন <span>›</span></button>
+      <button class="offer-btn" type="button" data-view="packages">♔ স্পেশাল অফার <span>›</span></button>
+    </form>
+    <p class="hint">রিচার্জ অর্ডার ম্যানুয়ালি যাচাই করা হবে।</p>
+  </section>
+  <section class="section-head"><h2>Quick Services</h2><button class="textbtn" data-view="services">More Services ›</button></section>
+  <section class="services">
+    <button data-view="packages"><span>⬡</span>Regular Pack</button>
+    <button data-view="packages"><span>▱</span>Bundle Offer</button>
+    <button data-view="packages"><span>◎</span>Internet</button>
+    <button data-view="packages"><span>♧</span>Voice</button>
+    <button data-view="services"><span>▤</span>Bill Pay</button>
+    <button data-view="services"><span>▯</span>Mobile Bank</button>
+    <button data-view="services"><span>♜</span>Bank Transfer</button>
+    <button data-view="services"><span>➤</span>Send Money</button>
+    <button data-view="packages"><span>♧</span>Calling Card</button>
+    <button data-view="services"><span>⬡</span>VPN Service</button>
+    <button data-view="services"><span>🛒</span>Shop</button>
+    <button data-view="services"><span>$</span>Loan</button>
+    <button data-view="services"><span>◎</span>Savings</button>
+    <button data-view="services"><span>♧</span>Buy Cards</button>
+    <button data-view="services"><span>▣</span>Marketplace</button>
+    <button data-view="admin"><span>▤</span>Vendor Board</button>
+    <button data-view="services"><span>▤</span>TallyKhata</button>
+    <button data-view="services"><span>▦</span>Hisab Tools</button>
+    <button data-view="history"><span>↗</span>MFS Tracker</button>
+    <button data-view="support"><span>🚀</span>MsM Service</button>
+  </section>
+  <section class="banner"><div class="banner-copy"><b>নিজের নামে টেলিকম ব্যবসা</b><p>রিচার্জ করুন সহজে, যেকোনো সময়</p></div><span class="spark">৫৫০০+</span></section>
+  <section id="panel" class="card panel hidden"></section>
+</main>
+<nav class="bottom"><button class="active" data-view="home"><span>⌂</span>Home</button><button data-view="support"><span>♟</span>Support</button><button class="add" data-view="addmoney"><span>◷</span>Add Money</button><button data-view="admin"><span>♣</span>Resellers</button><button data-view="services"><span>▦</span>Services</button></nav>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
